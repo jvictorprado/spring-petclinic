@@ -1,7 +1,15 @@
 pipeline {
     agent none
     stages {
-        stage('Build') {
+        
+        stage('Checkout') {
+            steps {
+                // Check Git repository source code
+                checkout scm
+            }
+        }
+
+        stage('Maven Install') {
             agent {
                 docker {
                     image 'maven:3.6.3'
@@ -11,5 +19,6 @@ pipeline {
                 sh 'mvn clean install'
             }
         }
+        
     }
 }
