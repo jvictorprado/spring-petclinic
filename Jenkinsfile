@@ -1,6 +1,18 @@
 pipeline {
     agent none
     stages {
+
+        stage('Java Install'){
+            agent {
+                docker {
+                    image 'openjdk:17'
+                }
+            }
+            steps {
+                sh 'java -version'
+            }
+        }
+
         stage('Maven Install') {
             agent {
                 docker {
@@ -8,9 +20,6 @@ pipeline {
                 }
             }
             steps {
-                script {
-                    sh 'apt-get update && apt-get install -y openjdk-17-jdk'
-                }
                 sh 'java -version'
                 sh 'mvn clean install'
             }
