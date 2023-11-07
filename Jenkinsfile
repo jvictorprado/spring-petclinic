@@ -16,6 +16,7 @@ pipeline {
                 }
             }
             steps {
+                sh 'java -version'
                 sh 'mvn clean install'
             }
         }
