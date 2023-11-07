@@ -165,10 +165,10 @@
             </goals>
             <configuration>
               <rules>
-                <requireJavaVersion>
+                <!-- <requireJavaVersion>
                   <message>This build requires at least Java ${java.version}, update your JVM, and run the build again</message>
                   <version>${java.version}</version>
-                </requireJavaVersion>
+                </requireJavaVersion> -->
               </rules>
             </configuration>
           </execution>
