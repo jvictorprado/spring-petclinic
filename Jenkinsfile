@@ -1,5 +1,5 @@
 pipeline {
-    agent none
+    agent any
     stages {
         
         stage('Checkout') {
@@ -19,6 +19,6 @@ pipeline {
                 sh 'mvn clean install'
             }
         }
-        
+
     }
 }
