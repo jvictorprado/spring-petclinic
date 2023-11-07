@@ -1,9 +1,5 @@
 pipeline {
     agent any
-    tools { 
-        maven 'Maven 3.6.3' 
-        jdk 'jdk17' 
-    }
     stages {
         
         stage('Checkout') {
@@ -14,11 +10,11 @@ pipeline {
         }
 
         stage('Maven Install') {
-            // agent {
-            //     docker {
-            //         image 'maven:3.6.3'
-            //     }
-            // }
+            agent {
+                docker {
+                    image 'maven:3.5.0'
+                }
+            }
             steps {
                 sh 'java -version'
                 sh 'mvn clean install'
