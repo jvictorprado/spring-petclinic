@@ -13,7 +13,7 @@ pipeline {
             agent {
                 docker {
                     // image 'maven:3.9.5'
-                    image: 'maven:3.9.5-eclipse-temurin-17'
+                    image 'maven:3.9.5-eclipse-temurin-17'
                 }
             }
             steps {
