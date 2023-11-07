@@ -154,7 +154,7 @@
 
   <build>
     <plugins>
-      <plugin>
+      <!-- <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-enforcer-plugin</artifactId>
         <executions>
@@ -165,15 +165,15 @@
             </goals>
             <configuration>
               <rules>
-                <!-- <requireJavaVersion>
+                <requireJavaVersion>
                   <message>This build requires at least Java ${java.version}, update your JVM, and run the build again</message>
                   <version>${java.version}</version>
-                </requireJavaVersion> -->
+                </requireJavaVersion>
               </rules>
             </configuration>
           </execution>
         </executions>
-      </plugin>
+      </plugin> -->
       <plugin>
         <groupId>io.spring.javaformat</groupId>
         <artifactId>spring-javaformat-maven-plugin</artifactId>
