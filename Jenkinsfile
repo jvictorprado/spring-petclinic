@@ -8,7 +8,6 @@ pipeline {
                 }
             }
             steps {
-                sh 'apt-get update && apt-get install -y openjdk-17-jdk'
                 sh 'mvn clean install'
             }
         }
