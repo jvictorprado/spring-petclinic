@@ -13,3 +13,12 @@ build/*
 _site/
 *.css
 !petclinic.css
+target/classes/*
+target/generated-sources/*
+target/generated-test-sources/*
+target/maven-archiver/*
+target/maven-status/*
+target/site/*
+target/surefire-reports/*
+target/test-classes/*
+target/test-ids/*
