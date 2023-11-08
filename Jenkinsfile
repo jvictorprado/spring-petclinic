@@ -13,15 +13,15 @@ pipeline {
             agent {
                 docker {
                     // image 'maven:latest'
-                    image 'maven:3.9.5-eclipse-temurin-17-alpine' 
+                    image 'maven:latest' 
                     args '-v /root/.m2:/root/.m2'
                 }
             }
             steps {
                 sh 'java -version'
                 // sh 'mvn -version'
-                sh 'mvn clean install'
-                //sh 'mvn -B -DskipTests clean package'
+                // sh 'mvn clean install'
+                sh 'mvn -B -DskipTests clean package'
             }
         }
 
