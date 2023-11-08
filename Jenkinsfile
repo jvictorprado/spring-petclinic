@@ -12,17 +12,11 @@ pipeline {
         stage('Maven Install') {
             agent {
                 docker {
-                    image 'ubuntu:latest'
+                    image 'maven:latest'
                 }
             }
             steps {
-                // sh 'mkdir -p /var/lib/apt/lists/partial'
-                // sh 'apt-get update'
-                // sh 'apt-get upgrade'
-                // sh 'apt-get install default-jdk'
-                // sh 'java -version'
-                sh 'apt install sudo'
-                sh 'sudo apt -y install maven'
+                sh 'java -version'
                 sh 'mvn -version'
                 sh 'mvn clean install'
             }
