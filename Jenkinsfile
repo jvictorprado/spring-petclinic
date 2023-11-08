@@ -13,7 +13,7 @@ pipeline {
             agent {
                 docker {
                     image 'maven:latest'
-                    args '-v /var:/root/.m2'
+                    args '-v /var:/root'
                 }
             }
             steps {
