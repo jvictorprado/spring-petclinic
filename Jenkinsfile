@@ -17,6 +17,7 @@ pipeline {
             }
             steps {
                 sh 'apt-get update'
+                sh 'apt-get upgrade'
                 sh 'sudo apt-get install default-jdk'
                 sh 'java -version'
                 sh 'apt-get -y install maven'
