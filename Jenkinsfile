@@ -21,7 +21,7 @@ pipeline {
                 // sh 'apt-get upgrade'
                 // sh 'apt-get install default-jdk'
                 // sh 'java -version'
-                sh 'apt-get -y install maven'
+                sh 'sudo apt-get -y install maven'
                 sh 'mvn -version'
                 sh 'mvn clean install'
             }
