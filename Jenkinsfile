@@ -17,10 +17,10 @@ pipeline {
             }
             steps {
                 // sh 'mkdir -p /var/lib/apt/lists/partial'
-                sh 'apt-get update'
-                sh 'apt-get upgrade'
-                sh 'apt-get install default-jdk'
-                sh 'java -version'
+                // sh 'apt-get update'
+                // sh 'apt-get upgrade'
+                // sh 'apt-get install default-jdk'
+                // sh 'java -version'
                 sh 'apt-get -y install maven'
                 sh 'mvn -version'
                 sh 'mvn clean install'
